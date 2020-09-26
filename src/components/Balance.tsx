@@ -12,7 +12,7 @@ const Balance: any = () => {
     return (
         <>
         <h4>Balance</h4>
-        <h1>${balance}</h1>
+        <h1 data-testid="balance">${balance}</h1>
     </>
     )
 }

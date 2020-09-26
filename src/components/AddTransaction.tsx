@@ -23,10 +23,12 @@ const AddTransaction: React.FC = () => {
     return (
         <div>
             <h3>Add new transaction</h3>
-            <form onSubmit={onSubmit}>
+            <form data-testid="addtransaction-form" onSubmit={onSubmit}>
             <div className="form-control">
                 <label htmlFor="text">Text</label>
-                <input type="text" value={text} 
+                <input type="text" 
+                    value={text} 
+                    data-testid="text"
                     onChange={(evt: React.ChangeEvent<HTMLInputElement>) => setText(evt.target.value)} 
                     placeholder="Enter text..." />
             </div>
@@ -34,10 +36,12 @@ const AddTransaction: React.FC = () => {
                 <label htmlFor="amount">Amount <br />
                 (negative - expense, positive - income)</label>
                 <input type="number" 
+                    data-testid="amount"
+                    value={amount}
                     onChange={(evt: React.ChangeEvent<HTMLInputElement>) => setAmount(Number(evt.target.value))} 
                     placeholder="Enter amount..." />
             </div>
-            <button type="submit" className="btn">Add transaction</button>
+            <button data-testid="addBtn" type="submit" className="btn">Add transaction</button>
             </form>
         </div>
     )

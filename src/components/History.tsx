@@ -9,7 +9,7 @@ const History: React.FC = () => {
         <div>
             <h3>History</h3>
             <ul className="list">
-                {transactions.map(transaction => ( 
+                {transactions.map((transaction: Transaction) => ( 
                     <Transaction key={transaction.id} transaction={transaction} /> 
                 ))}
             </ul>

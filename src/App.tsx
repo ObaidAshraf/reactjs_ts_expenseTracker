@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.css';
 // Components
 import Header from './components/Header'
@@ -13,7 +13,7 @@ function App() {
   return (
     <GlobalProvider>
       <Header />
-      <div className="container">
+      <div className="container" data-testid="appContainer">
         <Balance />
         <IncomeExpense />
         <History />
